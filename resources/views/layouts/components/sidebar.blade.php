@@ -30,19 +30,19 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kecamatan">
+              <a class="nav-link" href="../admin/kecamatan">
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Kecamatan</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="desa">
+              <a class="nav-link" href="../admin/desa">
                 <i class="ni ni-bullet-list-67 text-default"></i>
                 <span class="nav-link-text">Desa</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="rw">
+              <a class="nav-link" href="../admin/rw">
                 <i class="ni ni-key-25 text-info"></i>
                 <span class="nav-link-text">RW</span>
               </a>

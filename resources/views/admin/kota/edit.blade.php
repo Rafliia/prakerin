@@ -5,10 +5,10 @@
 <div class="col-md-12">
 <div class="card">
 <div class="card-header">
-Tambah Data Kota
+Edit Data Kota
 </div>
 <div class="card-body">
-<form action="{{route('kota.update',$provinsi->id)}}" method="post">
+<form action="{{route('kota.update',$kota->id)}}" method="post">
 @method('put')
 @csrf
 <div class="form-group">
@@ -17,7 +17,16 @@ Tambah Data Kota
 </div>
 <div class="form-group">
 <label for="">Nama Kota</label>
-<input type="text" name="nama_kota" value="{{$provinsi->nama_kota}}" class="form-control" required>
+<input type="text" name="nama_kota" value="{{$kota->nama_kota}}" class="form-control" required>
+</div>
+@csrf
+<div class="form group">
+<label for="">Pilih Provinsi</label>
+<select name="id_provinsi" class="form-control">
+@foreach($provinsi as $data)
+<option value="{{$data->id}}">{{$data->nama_provinsi}}</option>
+@endforeach
+</select>
 </div>
 <div class="form-group">
 <button type="submit" class="btn btn-primary btn-block">Simpan</button>
