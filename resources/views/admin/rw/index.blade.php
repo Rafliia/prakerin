@@ -7,7 +7,7 @@
         <div class="card-header">
             Data Desa
             <a href="{{route('rw.create')}}" class="btn btn-primary float-right">
-            Tambah RW</a>
+            Tambah Data</a>
             
             </a>
         </div>
@@ -17,8 +17,8 @@
             <table class="table">       
 <tr>
 <th>No</th>
-<th>Nama Desa</th>
 <th>RW</th>
+<th>Nama Desa</th>
 <th>Aksi</th>
 </tr>
 @php $no=1; @endphp

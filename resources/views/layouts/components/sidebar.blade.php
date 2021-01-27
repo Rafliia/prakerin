@@ -48,7 +48,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kasus">
+              <a class="nav-link" href="../admin/kasus">
                 <i class="ni ni-circle-08 text-pink"></i>
                 <span class="nav-link-text">Kasus</span>
               </a>
