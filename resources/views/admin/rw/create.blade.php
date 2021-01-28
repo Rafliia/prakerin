@@ -21,6 +21,9 @@ Tambah Data RW
 <div class="form-group">
 <label for="">RW</label>
 <input type="text" name="nama_rw" class="form-control" required>
+@if($errors->has('nama_rw'))
+<span class="text-danger">{{$errors->first('nama_rw')}}</span>
+@endif
 </div>
 <div class="form-group">
 <button type="submit" class="btn btn-primary btn-block">Simpan</button>

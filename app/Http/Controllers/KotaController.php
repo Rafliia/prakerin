@@ -38,6 +38,11 @@ class KotaController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'kode_kota' => 'required|unique:kotas',
+            'nama_kota' => 'required|unique:kotas',
+              ]
+              );
         $kota = new Kota();
         $kota->id_provinsi = $request->id_provinsi;
         $kota->kode_kota = $request->kode_kota;
@@ -80,6 +85,10 @@ class KotaController extends Controller
      */
     public function update(Request $request,$id)
     {
+        $request->validate([
+            'kode_kota' => 'required',
+            'nama_kota' => 'required',
+        ]);
         $kota = Kota::findOrFail($id);
         $kota->id_provinsi = $request->id_provinsi;
         $kota->kode_kota = $request->kode_kota;
