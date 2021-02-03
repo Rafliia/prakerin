@@ -1,8 +1,11 @@
 <?php
 
+use App\Models\provinsi;
+use App\Models\kasus;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostsController;
+use App\Http\Controllers\Api\ProvinsiController;
+use App\Http\Controllers\Api\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +28,6 @@ Route::post('/posts/store', 'PostsController@store');
 Route::get('/posts/{id}', 'PostsController@show');
 Route::post('/posts/update/{id}', 'PostsController@update');
 Route::delete('/posts/{id}', 'PostsController@destroy');
+
+Route::get('indo',[ApiController::class, 'index']);
+Route::get('provinsi/{id?}',[ApiController::class, 'provinsi']);
