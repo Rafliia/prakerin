@@ -5,7 +5,6 @@ use App\Models\Provinsi;
 use App\Models\Kasus;
 use App\Models\Kota;
 use App\Models\Kecamatan;
-use App\Models\Kelurahan;
 use App\Models\Desa;
 use App\Models\Rw;
 use Illuminate\Http\Request;

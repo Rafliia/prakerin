@@ -5,6 +5,13 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Provinsi;
+use App\Models\Kota;
+use App\Models\Kecamatan;
+use App\Models\Desa;
+use App\Models\Rw;
+use App\Models\Kasus;
+
+
 use Carbon\Carbon;
 use DB; 
 
