@@ -1,15 +1,9 @@
 <?php
 
-
-use App\Models\Provinsi;
-use App\Models\Kasus;
-use App\Models\Kota;
-use App\Models\Kecamatan;
-use App\Models\Desa;
-use App\Models\Rw;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\ApiController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\API\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,18 +19,19 @@ use App\Http\Controllers\Api\ApiController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('/hari', [ApiController::class,'hari']);
-Route::get('/indo', [ApiController::class,'indonesia']);
-Route::get('/provinsi1/{id}', [ApiController::class,'provinsi']);
-Route::get('/provinsi2', [ApiController::class,'provinsi1']);
-Route::get('/kota', [ApiController::class,'kota']);
-Route::get('/kecamatan', [ApiController::class,'kecamatan']);
-Route::get('/desa', [ApiController::class,'desa']);
-
-// API Provinsi
-Route::get('provinsi', [ApiController::class, 'index']);
-Route::post('provinsi', [ApiController::class, 'store']);
-Route::get('provinsi/{id}', [ApiController::class, 'show']);
-Route::post('provinsi/update/{id}', [ApiController::class, 'update']);
-Route::delete('/provinsi/{id}', [ApiController::class, 'destroy']);
+Route::get('/global', [ApiController::class, 'global']);  
+Route::get('/indonesia', [ApiController::class, 'indonesia']);  
+Route::get('/provinsi', [ApiController::class, 'provinsi']);
+Route::get('/provinsi/{id}', [ApiController::class, 'provinsis']);
+Route::get('/kota', [ApiController::class, 'kota']);
+Route::get('/kota/{id}', [ApiController::class, 'kotas']);
+Route::get('/kecamatan', [ApiController::class, 'kecamatan']);
+Route::get('/kecamatan/{id}', [ApiController::class, 'kecamatans']);
+Route::get('/desa', [ApiController::class, 'desa']);
+Route::get('/desa/{id}', [ApiController::class, 'desas']);
+Route::get('/rw', [ApiController::class, 'rw']);
+Route::get('/rw/{id}', [ApiController::class, 'rws']);
+Route::get('/reaktif', [ApiController::class, 'reaktif']);
+Route::get('/positif', [ApiController::class, 'positif']);
+Route::get('/sembuh', [ApiController::class, 'sembuh']);
+Route::get('/meninggal', [ApiController::class, 'meninggal']);
