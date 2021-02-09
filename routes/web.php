@@ -42,6 +42,10 @@ Route::resource('kecamatan',KecamatanController::class);
 Route::resource('desa',DesaController::class);
 Route::resource('rw',RwController::class);
 Route::resource('kasus',KasusController::class);
+
+});
+Route::get('dashboard',function () {
+    return view('dashboard.index');
 });
 
 
