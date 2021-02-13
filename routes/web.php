@@ -7,6 +7,8 @@ use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\DesaController;
 use App\Http\Controllers\RwController;
 use App\Http\Controllers\KasusController;
+use App\Http\Controllers\FrontendController;
+Route::resource('/frontend',FrontendController::class);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,10 +45,10 @@ Route::resource('desa',DesaController::class);
 Route::resource('rw',RwController::class);
 Route::resource('kasus',KasusController::class);
 
+
+
 });
-Route::get('dashboard',function () {
-    return view('dashboard.index');
-});
+
 
 
 
