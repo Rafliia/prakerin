@@ -8,7 +8,7 @@ use App\Http\Controllers\DesaController;
 use App\Http\Controllers\RwController;
 use App\Http\Controllers\KasusController;
 use App\Http\Controllers\FrontendController;
-Route::resource('/frontend',FrontendController::class);
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +20,7 @@ Route::resource('/frontend',FrontendController::class);
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -48,7 +48,7 @@ Route::resource('kasus',KasusController::class);
 
 
 });
-
+Route::resource('/',FrontendController::class);
 
 
 
