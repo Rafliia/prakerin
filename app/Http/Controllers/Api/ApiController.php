@@ -15,15 +15,15 @@ use App\Models\Kasus;
 class ApiController extends Controller
 {
     
-    public function global()
-    {
-        $response = Http::get('https://api.kawalcorona.com/global');
-            $data =$response->json();
-            return $data;
-            return response([
-                'Message' => ' Berhasil!',
-            ]);
-    }
+    // public function global()
+    // {
+    //     $response = Http::get('https://api.kawalcorona.com/global');
+    //         $data =$response->json();
+    //         return $data;
+    //         return response([
+    //             'Message' => ' Berhasil!',
+    //         ]);
+    // }
     public function Indonesia(){
         $positif = DB::table('kasuses')
                         ->select('kasuses.positif')
